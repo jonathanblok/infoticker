@@ -8,12 +8,12 @@ rssfile = open("rss-feeds.txt");
 rssFeedList = []
 testUrl = "http://www.nu.nl/rss"
 
+# TODO: Look at timestamp and add feeds in order
 
 for url in rssfile:
 	rssFeedList.append([url.strip()])
-
+    
 stories = feedparser.parse(testUrl)
-print(stories.entries)
 
 for story in stories.entries:
     print(story.title)
