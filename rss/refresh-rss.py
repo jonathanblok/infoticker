@@ -1,20 +1,31 @@
 import feedparser
 
-# Let's only show the 20 newest
-limit = 20;
+class RssProvider:
 
-# Load the feeds we are going to retrieve
-rssfile = open("rss-feeds.txt");
-rssFeedList = []
-testUrl = "http://www.nu.nl/rss"
+    # Let's only show the 20 newest
+    limit = 20;
 
-# TODO: Look at timestamp and add feeds in order
+    # Load the feeds we are going to retrieve
+    rssfile = open("rss-feeds.txt")
+    # Initialize list of feeds
+    rssFeedList = []
+    # Initialize list of stories
+    feedSourceList = []
+    testUrl = "http://www.nu.nl/rss"
 
-for url in rssfile:
-	rssFeedList.append([url.strip()])
-    
-stories = feedparser.parse(testUrl)
+    # TODO: Look at timestamp and add feeds in order
 
-for story in stories.entries:
-    print(story.title)
+    for url in rssfile:
+        rssFeedList.append([url.strip()])
 
+    for strippedUrl in rssFeedList:
+        print(strippedUrl)
+        feedSourceList.append(feedparser.parse(strippedUrl[0]))
+
+    for feedSource in feedSourceList:
+        print("=== " + feedSource.feed.title + " ===")
+        for story in feedSource.entries:
+            print(story.title)
+
+    def calculateFeedHash(feed):
+        return 0;
