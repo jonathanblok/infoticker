@@ -1,5 +1,6 @@
 import feedparser
 
+
 class RssProvider:
 
     # Let's only show the 20 newest
