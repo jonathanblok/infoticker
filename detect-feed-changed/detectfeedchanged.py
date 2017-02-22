@@ -2,9 +2,9 @@ import feedhashcalculator, loadfeedsfromfile, base64, string
 
 
 # Should return boolean assertion if feeds have been changed
-def checkIfFeedChanged(feedSourceList, arrayOfFeedHashes):
-    calculatedHashList = getFeedHashes(feedSourceList)
-    print(calculatedHashList)
+def checkIfFeedChanged(oldHash, newHash):
+    return (oldHash == newHash)
+
 
 def sanitize(subject):
     printable = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
@@ -19,6 +19,11 @@ def getFeedHashes(feedSourceList):
             calculatedHashList.append(calculatedHash)
 
     return calculatedHashList
+
+def getNewest(limit):
+    feedListInOrder = []
+    for iterator in range(0, limit):
+        # How do we order the list of feeds?
 
 
 def main():
