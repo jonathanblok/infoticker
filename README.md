@@ -6,6 +6,4 @@ Infoticker is a console application currently in development which shows you you
 * Twitter
 * Google Calendar
 
-Contact
-
-This application was written by Jonathan S. Blok <jonathan.s.blok[at]gmail.com>
+https://github.com/jonathanblok/infoticker
