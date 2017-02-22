@@ -18,6 +18,8 @@ def getFeedHashes(feedSourceList):
             calculatedHash = feedhashcalculator.calculateHashArrayFromFeeds(sanitizedFeedTitle)
             calculatedHashList.append(calculatedHash)
 
+    return calculatedHashList
+
 
 def main():
     feedSourceList = loadfeedsfromfile.getFeedList()
