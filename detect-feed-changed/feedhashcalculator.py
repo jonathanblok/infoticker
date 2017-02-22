@@ -2,9 +2,12 @@ import hashlib
 
 
 def calculateHashArrayFromFeeds(feedTitle):
-    m = hashlib.md5()
-    m.update(feedTitle)
-    return m.hexdigest()
+    try:
+        m = hashlib.md5()
+        m.update(feedTitle)
+        return m.hexdigest()
+    except UnicodeEncodeError:
+        print("Unencodable characters found in: "+feedTitle);
 
 def main():
     #pass

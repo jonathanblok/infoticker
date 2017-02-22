@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="110207ff-6cbe-4b5f-af91-a0ca9b47a5eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/detect-feed-changed/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/detect-feed-changed/detect-feed-changed.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/detect-feed-changed/feedhashcalculator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/detect-feed-changed/loadfeedsfromfile.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/detect-feed-changed/rss-feeds.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/detect-feed-changed/detect-feed-changed.py" afterPath="$PROJECT_DIR$/detect-feed-changed/detectfeedchanged.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rss/refresh-rss.py" afterPath="$PROJECT_DIR$/rss/refresh-rss.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detect-feed-changed/feedhashcalculator.py" afterPath="$PROJECT_DIR$/detect-feed-changed/feedhashcalculator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,18 +24,38 @@
       <file leaf-file-name="refresh-rss.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rss/refresh-rss.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="28" column="30" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="28" selection-end-column="30" />
+            <state relative-caret-position="435">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detect-feed-changed.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/detect-feed-changed/detect-feed-changed.py">
+      <file leaf-file-name="loadfeedsfromfile.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/detect-feed-changed/loadfeedsfromfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state relative-caret-position="360">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rss-feeds.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/detect-feed-changed/rss-feeds.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detectfeedchanged.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/detect-feed-changed/detectfeedchanged.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -44,8 +64,8 @@
       <file leaf-file-name="feedhashcalculator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detect-feed-changed/feedhashcalculator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            <state relative-caret-position="135">
+              <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -71,7 +91,10 @@
         <option value="$PROJECT_DIR$/rss/rss-feeds-small.txt" />
         <option value="$PROJECT_DIR$/rss/refresh-rss.py" />
         <option value="$PROJECT_DIR$/detect-feed-changed/feed-hash-calculator.py" />
+        <option value="$PROJECT_DIR$/detect-feed-changed/load-feeds-from-file.py" />
         <option value="$PROJECT_DIR$/detect-feed-changed/detect-feed-changed.py" />
+        <option value="$PROJECT_DIR$/detect-feed-changed/feedhashcalculator.py" />
+        <option value="$PROJECT_DIR$/detect-feed-changed/detectfeedchanged.py" />
       </list>
     </option>
   </component>
@@ -120,6 +143,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="rss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="infoticker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="infoticker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="detect-feed-changed" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -142,6 +179,7 @@
       <recent name="$PROJECT_DIR$/mail" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/detect-feed-changed" />
       <recent name="$PROJECT_DIR$/rss" />
     </key>
   </component>
@@ -192,7 +230,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="infoticker" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect-feed-changed/detect-feed-changed.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect-feed-changed/detectfeedchanged.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -366,7 +404,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.253125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -385,7 +423,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -432,24 +470,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rss/refresh-rss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="30" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="28" selection-end-column="30" />
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detect-feed-changed/rss-feeds.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detect-feed-changed/loadfeedsfromfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/detect-feed-changed/feedhashcalculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="135">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detect-feed-changed/detect-feed-changed.py">
+    <entry file="file://$PROJECT_DIR$/detect-feed-changed/detectfeedchanged.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="285">
+          <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
           <folding />
         </state>
       </provider>
