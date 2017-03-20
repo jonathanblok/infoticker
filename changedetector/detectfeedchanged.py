@@ -10,6 +10,19 @@ def sanitize(subject):
     printable = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
     return filter(lambda x: x in printable, subject)
 
+def getStoryTitlesOrderedByUpdated(feedSourceList)
+    orderedTitleList = []
+    for feedSource in feedSourceList:
+        sortedEntries = sorted(feedSource.entries, key=lambda story: story.updated);  # sort by age
+        for story in sortedEntries:
+            print(story);
+            sanitizedFeedTitle = sanitize(story.title)
+            calculatedHash = feedhashcalculator.calculateHashArrayFromFeeds(sanitizedFeedTitle)
+            calculatedHashList.append(calculatedHash)
+
+    return calculatedHashList
+
+
 def getFeedHashes(feedSourceList):
     calculatedHashList = []
     for feedSource in feedSourceList:
