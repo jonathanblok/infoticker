@@ -13,7 +13,9 @@ def sanitize(subject):
 def getFeedHashes(feedSourceList):
     calculatedHashList = []
     for feedSource in feedSourceList:
-        for story in feedSource.entries:
+        sortedEntries = sorted(feedSource.entries, key=lambda story: story.updated);  # sort by age
+        for story in sortedEntries:
+            print(story);
             sanitizedFeedTitle = sanitize(story.title)
             calculatedHash = feedhashcalculator.calculateHashArrayFromFeeds(sanitizedFeedTitle)
             calculatedHashList.append(calculatedHash)
@@ -23,8 +25,7 @@ def getFeedHashes(feedSourceList):
 def getNewest(limit):
     feedListInOrder = []
     for iterator in range(0, limit):
-        # How do we order the list of feeds?
-
+        return;
 
 def main():
     feedSourceList = loadfeedsfromfile.getFeedList()
