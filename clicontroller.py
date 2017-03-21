@@ -1,5 +1,8 @@
-import changedetector.detectfeedchanged,changedetector.feedhashcalculator, changedetector.loadfeedsfromfile, \
-    time, feedcomparator
+import changedetector.detectfeedchanged,\
+    changedetector.loadfeedsfromfile, \
+    time, \
+    feedcomparator
+
 def main():
     print('Starting InfoTicker...');
     print('Loading list of RSS feeds...');
@@ -9,9 +12,14 @@ def main():
 
     while True:
         print('Waiting for feed');
+        mostRecentList = []
         mostRecentList = changedetector.loadfeedsfromfile.getFeedList()
+        newFeedSourceList = []
         newFeedSourceList = feedcomparator.compareFeedSourceLists(mostRecentList, initialFeedSourceList)
-        print(changedetector.getStoryTitlesOrderedByUpdated(newFeedSourceList))
+
+        for entry in newFeedSourceList:
+            print(entry.title)
+
         initialFeedSourceList = mostRecentList
         time.sleep(1);
 

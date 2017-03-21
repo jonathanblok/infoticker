@@ -1,4 +1,4 @@
-import feedhashcalculator, loadfeedsfromfile, base64, string
+import changedetector.feedhashcalculator, changedetector.loadfeedsfromfile, base64, string
 
 
 # Should return boolean assertion if feeds have been changed

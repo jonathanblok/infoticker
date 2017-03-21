@@ -1,17 +1,10 @@
 import feedparser
 
-# Let's only show the 20 newest
-limit = 20;
-
-# Initialize list of feeds
-rssFeedList = []
-# Initialize list of stories
-feedSourceList = []
-testUrl = "http://www.nu.nl/rss"
-
-# TODO: Look at timestamp and add feeds in order
-
 def getFeedList():
+    # Initialize list of feeds
+    rssFeedList = []
+    # Initialize list of stories
+    feedSourceList = []
     # Load the feeds we are going to retrieve
     rssfile = open("changedetector/rss-feeds.txt")
     for url in rssfile:
