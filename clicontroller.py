@@ -3,6 +3,9 @@ import changedetector.detectfeedchanged,\
     time, \
     feedcomparator
 
+REFRESH_INTERVAL_IN_SEC = 10
+
+
 def main():
     print('Starting InfoTicker...');
     print('Loading list of RSS feeds...');
@@ -23,7 +26,7 @@ def main():
             print(entry.title)
 
         initialFeedSourceList = mostRecentList
-        time.sleep(1);
+        time.sleep(REFRESH_INTERVAL_IN_SEC);
 
 if __name__ == '__main__':
     main()
