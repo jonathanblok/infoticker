@@ -10,8 +10,10 @@ def main():
 
     #feedTitleList = changedetector.detectfeedchanged.getStoryTitlesOrderedByUpdated(initialFeedSourceList)
 
+    print('Waiting for a feed to update...')
+
     while True:
-        print('Waiting for feed');
+        #print('Waiting for feed to update ..');
         mostRecentList = []
         mostRecentList = changedetector.loadfeedsfromfile.getFeedList()
         newFeedSourceList = []

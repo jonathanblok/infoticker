@@ -17,7 +17,7 @@ def compareFeedSourceLists(feedSourceList1, feedSourceList2):
     uniqueEntryList = []
 
     for entry in entryList1:
-        if isTitleInEntryList(entry, entryList2):
+        if not isTitleInEntryList(entry, entryList2):
             uniqueEntryList.append(entry)
 
     return uniqueEntryList
