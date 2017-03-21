@@ -13,7 +13,7 @@ testUrl = "http://www.nu.nl/rss"
 
 def getFeedList():
     # Load the feeds we are going to retrieve
-    rssfile = open("rss-feeds.txt")
+    rssfile = open("changedetector/rss-feeds.txt")
     for url in rssfile:
         rssFeedList.append([url.strip()])
 
