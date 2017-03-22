@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="110207ff-6cbe-4b5f-af91-a0ca9b47a5eb" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/changedetector/__init__.py" afterPath="$PROJECT_DIR$/feedretrieval/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/changedetector/detectfeedchanged.py" afterPath="$PROJECT_DIR$/feedretrieval/detectfeedchanged.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/changedetector/feedhashcalculator.py" afterPath="$PROJECT_DIR$/feedretrieval/feedhashcalculator.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/changedetector/loadfeedsfromfile.py" afterPath="$PROJECT_DIR$/feedretrieval/loadfeedsfromfile.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/changedetector/rss-feeds.txt" afterPath="$PROJECT_DIR$/feedretrieval/rss-feeds.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clicontroller.py" afterPath="$PROJECT_DIR$/clicontroller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +50,8 @@
       <file leaf-file-name="clicontroller.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clicontroller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            <state relative-caret-position="435">
+              <caret line="44" column="48" lean-forward="false" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -657,8 +651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/clicontroller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        <state relative-caret-position="435">
+          <caret line="44" column="48" lean-forward="false" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
           <folding />
         </state>
       </provider>

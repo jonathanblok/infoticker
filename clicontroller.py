@@ -42,7 +42,7 @@ def main():
             newFeedSourceList = feedcomparator.compareFeedSourceLists(mostRecentList, initialFeedSourceList)
 
             for entry in newFeedSourceList:
-                print(entry.title)
+                printColor(entry.title, bcolors.OKBLUE)
 
             initialFeedSourceList = mostRecentList
 
