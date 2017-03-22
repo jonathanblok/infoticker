@@ -1,4 +1,4 @@
-import changedetector.feedhashcalculator, changedetector.loadfeedsfromfile, base64, string
+import feedretrieval.feedhashcalculator, feedretrieval.loadfeedsfromfile, base64, string
 
 
 # Should return boolean assertion if feeds have been changed
@@ -29,7 +29,7 @@ def getFeedHashes(feedSourceList):
         for story in sortedEntries:
             print(story);
             sanitizedFeedTitle = sanitize(story.title)
-            calculatedHash = feedhashcalculator.calculateHashArrayFromFeeds(sanitizedFeedTitle)
+            calculatedHash = feedretrieval.feedhashcalculator.calculateHashArrayFromFeeds(sanitizedFeedTitle)
             calculatedHashList.append(calculatedHash)
 
     return calculatedHashList
@@ -40,7 +40,7 @@ def getNewest(limit):
         return;
 
 def main():
-    feedSourceList = loadfeedsfromfile.getFeedList()
+    feedSourceList = feedretrieval.loadfeedsfromfile.getFeedList()
     feedHashes = []
     feedHashes.append(getFeedHashes(feedSourceList))
     print(feedHashes)
