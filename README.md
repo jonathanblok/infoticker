@@ -7,3 +7,5 @@ Infoticker is a console application currently in development which shows you you
 * Google Calendar
 
 https://github.com/jonathanblok/infoticker
+
+Run by typing 'python clicontroller.py'
