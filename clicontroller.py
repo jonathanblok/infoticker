@@ -23,12 +23,12 @@ class CliController:
     colorList = [HEADER, OKBLUE, OKGREEN, WARNING, FAIL, ENDC, BOLD, UNDERLINE]
     colorIterator = -1
 
-    def printColor(msg, color):
-        print([color + msg + CliController.ENDC])
+    def printColor(self, msg, color):
+        print(color + msg + CliController.ENDC)
 
-    def getNextColor():
+    def getNextColor(self):
         CliController.colorIterator += 1
-        CliController.colorIterator = CliController.colorIterator % CliController.colorList.__sizeof__()
+        CliController.colorIterator = CliController.colorIterator % 7
         return CliController.colorList[CliController.colorIterator]
 
 
@@ -41,14 +41,11 @@ if __name__ == '__main__':
     print('Starting Infoticker...');
     print('Loading list of RSS feeds...');
     controller = CliController()
-    print('helloWorld', controller.OKBLUE)
-    ##print(controller.printColor((str(controller.REFRESH_INTERVAL_IN_SEC), '\033[95m')))
     initialFeedSourceList = loadfeedsfromfile.getFeedList()
 
     # feedTitleList = feedretrieval.detectfeedchanged.getStoryTitlesOrderedByUpdated(initialFeedSourceList)
 
     print('Waiting for a feed to update...')
-    colorIndex = 0;
 
     while True:
         try:
