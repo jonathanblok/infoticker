@@ -1,9 +1,8 @@
-import feedretrieval.detectfeedchanged,\
-    feedretrieval.loadfeedsfromfile, \
-    time, \
-    feedcomparator, \
-    sys, \
-    signal
+import feedcomparator
+import loadfeedsfromfile
+import signal
+import sys
+import time
 
 REFRESH_INTERVAL_IN_SEC = 10
 
@@ -27,7 +26,7 @@ def quit(signal, frame):
 def main():
     print('Starting Infoticker...');
     print('Loading list of RSS feeds...');
-    initialFeedSourceList = feedretrieval.loadfeedsfromfile.getFeedList()
+    initialFeedSourceList = loadfeedsfromfile.getFeedList()
 
     #feedTitleList = feedretrieval.detectfeedchanged.getStoryTitlesOrderedByUpdated(initialFeedSourceList)
 
@@ -37,7 +36,7 @@ def main():
         try:
             #print('Waiting for feed to update ..');
             mostRecentList = []
-            mostRecentList = feedretrieval.loadfeedsfromfile.getFeedList()
+            mostRecentList = loadfeedsfromfile.getFeedList()
             newFeedSourceList = []
             newFeedSourceList = feedcomparator.compareFeedSourceLists(mostRecentList, initialFeedSourceList)
 

@@ -6,7 +6,7 @@ def getFeedList():
     # Initialize list of stories
     feedSourceList = []
     # Load the feeds we are going to retrieve
-    rssfile = open("rss/rss-feeds.txt")
+    rssfile = open("resources/rss-feeds.txt")
     for url in rssfile:
         rssFeedList.append([url.strip()])
 
