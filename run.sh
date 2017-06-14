@@ -1,4 +1,4 @@
 #!/bin/sh
 
 clear
-python clicontroller.py
+python3 clicontroller.py

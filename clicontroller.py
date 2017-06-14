@@ -3,7 +3,7 @@ import loadfeedsfromfile
 import signal
 import sys
 import time
-
+from urllib.parse import urlparse
 
 class CliController:
 
@@ -53,7 +53,8 @@ if __name__ == '__main__':
             newFeedSourceList = feedcomparator.compareFeedSourceLists(mostRecentList, initialFeedSourceList)
 
             for entry in newFeedSourceList:
-                controller.printColor(entry.title, controller.getNextColor())
+                hostname = urlparse(entry.link).netloc
+                controller.printColor(entry.title + ' : ' + hostname, controller.getNextColor())
 
             initialFeedSourceList = mostRecentList
 
