@@ -54,11 +54,14 @@ if __name__ == '__main__':
             newFeedSourceList = feedcomparator.compareFeedSourceLists(mostRecentList, initialFeedSourceList)
 
             for entry in newFeedSourceList:
-                hostname = urlparse(entry.link).netloc
-                controller.printColor(entry.title + ' : ' + hostname, controller.getNextColor())
+
+                parsed_url = urlparse(entry.link)
+                host_and_path = parsed_url.netloc + parsed_url.path
+                controller.printColor(entry.title + ' : ' + host_and_path, controller.getNextColor())
 
             initialFeedSourceList = mostRecentList
 
             time.sleep(CliController.REFRESH_INTERVAL_IN_SEC)
         except KeyboardInterrupt:
+            print('Quitting Infoticker...')
             break
