@@ -32,20 +32,16 @@ class CliController:
         CliController.colorIterator = CliController.colorIterator % 7
         return CliController.colorList[CliController.colorIterator]
 
-    def quit(signal, frame):
+    def quit(self):
         print(' Quitting Infoticker...')
         sys.exit(0)
 
 
 if __name__ == '__main__':
-    signal.signal(signal.SIGINT, quit)
     print('Starting Infoticker...');
-    print('Loading list of RSS feeds...');
     controller = CliController()
+    print('Loading list of RSS feeds...');
     initialFeedSourceList = loadfeedsfromfile.getFeedList()
-
-    # feedTitleList = feedretrieval.detectfeedchanged.getStoryTitlesOrderedByUpdated(initialFeedSourceList)
-
     print('Waiting for a feed to update...')
 
     while True:
@@ -54,7 +50,6 @@ if __name__ == '__main__':
             newFeedSourceList = feedcomparator.compareFeedSourceLists(mostRecentList, initialFeedSourceList)
 
             for entry in newFeedSourceList:
-
                 parsed_url = urlparse(entry.link)
                 host_and_path = parsed_url.netloc + parsed_url.path
                 controller.printColor(entry.title + ' : ' + host_and_path, controller.getNextColor())
@@ -63,5 +58,5 @@ if __name__ == '__main__':
 
             time.sleep(CliController.REFRESH_INTERVAL_IN_SEC)
         except KeyboardInterrupt:
-            print('Quitting Infoticker...')
-            break
+            controller.quit()
+
