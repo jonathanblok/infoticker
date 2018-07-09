@@ -5,6 +5,7 @@ import sys
 import time
 from urllib.parse import urlparse
 
+
 class CliController:
 
     def __init__(self):
@@ -31,10 +32,10 @@ class CliController:
         CliController.colorIterator = CliController.colorIterator % 7
         return CliController.colorList[CliController.colorIterator]
 
+    def quit(signal, frame):
+        print(' Quitting Infoticker...')
+        sys.exit(0)
 
-def quit(signal, frame):
-    print(' Quitting Infoticker...')
-    sys.exit(0)
 
 if __name__ == '__main__':
     signal.signal(signal.SIGINT, quit)
